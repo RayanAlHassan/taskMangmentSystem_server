@@ -1,17 +1,17 @@
 import express from 'express';
-import { getTasks, addTask, updateTask, deleteTask } from './controller/Tasks.js'; 
+import { getAllTasks, addTask, updateTask, deleteTask } from '../controller/Tasks.js'; 
 const router = express.Router();
 
-// GET /tasks
-router.get('/tasks', getTasks);
+// GET /
+router.get('/', getAllTasks);
 
 // POST /tasks
-router.post('/tasks', addTask);
+router.post('/', addTask);
 
-// PUT /tasks/:id
-router.put('/tasks/:id', updateTask);
+// PUT /:id
+router.put('/:id', updateTask);
 
-// DELETE /tasks/:id
-router.delete('/tasks/:id', deleteTask);
+// DELETE /:id
+router.delete('/:id', deleteTask);
 
 export default router;

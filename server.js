@@ -5,7 +5,7 @@ import cors from "cors"
 import dotenv from "dotenv"
 import { connectDB } from "./config.js/Mongo.js";
 dotenv.config()
-import Tasks from "./routes/Tasks.js";
+import router from "./routes/Tasks.js";
 
 
 const app=express()
@@ -33,4 +33,4 @@ app.listen(PORT, (error)=>{
 connectDB()
 
 // Define routes
-app.use("/task", Tasks)
+app.use("/task", router)

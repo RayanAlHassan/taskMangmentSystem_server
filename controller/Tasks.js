@@ -1,6 +1,5 @@
 
-import TaskSchema from '../models/Task.js';
-
+import TaskSchema from "../models/Tasks.js";
 // Get all Tasks
 export const getAllTasks = async (req, res) => {
   try {
@@ -24,7 +23,7 @@ export const addTask = async (req, res) => {
       }
   
       // Create a new task
-      const newTask = await Task.create({
+      const newTask = await TaskSchema.create({
         title,
         description,
         completed: false,  
