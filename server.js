@@ -13,7 +13,7 @@ app.use(express.json());
 
 
 const corsOption={
-    origin:['http://localhost:3000',"https://task-mangment-system-ten.vercel.app"],
+    origin:['http://localhost:3000',"https://task-mangment-system.vercel.app","https://task-mangment-system-client-two.vercel.app"],
     credentials:true,
     optionsSuccessStatus:200
 }
